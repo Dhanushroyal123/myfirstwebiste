@@ -35,8 +35,12 @@
   padding-top: 30px;
   border: 1px solid #bd9f66;
   border-radius: 5px;
+  padding-bottom: 30px;
 }
-
+.content ul {
+  border: 1px solid white;
+  margin: 10px;
+}
 .content ul li {
   color: white;
   text-transform: uppercase;
@@ -49,7 +53,6 @@
   text-decoration: underline;
   letter-spacing: 5px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  width: 90%;
 }
 
 .content a {
@@ -114,6 +117,7 @@
   .content ul li {
     background-color: rgba(46, 46, 46, 0.9);
     font-size: 12px;
+    letter-spacing: 2px;
   }
   .brand .brandname {
     font-size: 20px;
