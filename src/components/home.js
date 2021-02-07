@@ -48,7 +48,7 @@ const Footer = () => {
             style={{
               color: 'white',
               lineHeight: '25px',
-              letterSpacing: '2px',
+              letterSpacing: '1px',
             }}
           >
             THE OPTOMETRY CONSULTANCY
