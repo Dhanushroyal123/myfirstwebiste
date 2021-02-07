@@ -1,38 +1,132 @@
 .App {
+  box-sizing: border-box;
+}
+
+.brand {
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.brand .item-1 {
+  flex: 1;
+}
+.brand .item-2 {
+  flex: 3;
+}
+.brand .item-3 {
+  flex: 1;
+}
+
+.brand .logo {
+  width: 300px;
+  height: 150px;
+}
+
+.brand .brandname {
+  color: white;
+  display: inline-block;
+  margin: 20px;
+  font-size: 50px;
+  font-weight: bold;
+  border: 5px solid #bd9f66;
+  padding: 10px;
+}
+
+.brand img#logo2 {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+}
+.content {
+  background-color: black;
+  padding-top: 30px;
+  border: 1px solid #bd9f66;
+  border-radius: 5px;
+}
+
+.content ul li {
+  color: white;
+  text-transform: uppercase;
+  background-color: rgba(46, 46, 46);
+  margin: 5px;
+  padding: 6px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: underline;
+  letter-spacing: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 90%;
+}
+
+.content a {
+  color: #bd9f66;
+}
+
+.content h1 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 6px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.content ul ul#idp-1 li {
+  border: 1px solid #bd9f66;
+  font-weight: 500;
   color: white;
+  text-decoration: none;
+}
+.content ul ul#idp-2 li {
+  border: 1px solid #bd9f66;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+}
+.content ul ul#idp-3 li {
+  border: 1px solid #bd9f66;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+}
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer .item {
+  flex: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.footer .space {
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.footer .about p {
+  color: white;
+  line-height: 25px;
+}
+
+@media screen and (max-width: 620px) {
+  .brand .logo {
+    width: 100%;
+    height: 150px;
   }
-  to {
-    transform: rotate(360deg);
+  .brand .brandname {
+    margin-left: 0px;
+    margin: 15px;
+    font-size: 25px;
+  }
+  .brand img#logo2 {
+    display: none;
+  }
+  .content ul li {
+    background-color: rgba(46, 46, 46, 0.9);
+    font-size: 12px;
+  }
+  .brand .brandname {
+    font-size: 20px;
+  }
+  .footer .item {
+    flex: none;
+    width: 100%;
   }
 }
