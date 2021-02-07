@@ -32,7 +32,14 @@ const Footer = () => {
     <>
       <div className='footer'>
         <div className='about item'>
-          <h2 style={{ color: 'white' }}>ABOUT US</h2>
+          <h2
+            style={{
+              color: 'white',
+              textDecoration: 'underline',
+            }}
+          >
+            ABOUT US
+          </h2>
           <p>
             The Radiant Star Group was founded in 2013, in the business
             metropolis of the United Arab Emirates – Dubai. Since its
@@ -43,7 +50,9 @@ const Footer = () => {
         </div>
         <div className='space'></div>
         <div className='address item'>
-          <h2 style={{ color: 'white' }}>CONTACT US</h2>
+          <h2 style={{ color: 'white', textDecoration: 'underline' }}>
+            CONTACT US
+          </h2>
           <p
             style={{
               color: 'white',

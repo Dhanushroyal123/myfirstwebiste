@@ -90,6 +90,7 @@
 }
 .footer .item {
   flex: 1;
+  padding: 10px;
 }
 
 .footer .space {
