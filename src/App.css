@@ -1,131 +1,79 @@
-.App {
-  box-sizing: border-box;
-}
+.header {
+  background-color: #dbedff;
 
-.brand {
-  background-color: black;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.brand .logo {
-  width: 300px;
-  height: 150px;
-}
-
-.brand .brandname {
-  color: white;
-  display: inline-block;
-  margin: 20px;
-  font-size: 45px;
-  font-weight: bold;
-  border: 5px solid #bd9f66;
-  padding: 10px;
-  letter-spacing: 2px;
-}
-
-.brand img#logo2 {
-  width: 100px;
   height: 100px;
+  padding: 0px 50px 0px 50px;
 }
-.content {
-  background-color: black;
-  padding-top: 30px;
-  border: 1px solid #bd9f66;
-  border-radius: 5px;
-  padding-bottom: 30px;
-}
-.content ul {
-  border: 1px solid white;
-  margin: 10px;
-}
-.content ul li {
+
+span#brand {
   color: white;
-  text-transform: uppercase;
-  background-color: rgba(46, 46, 46);
-  margin: 5px;
-  padding: 6px;
-  border: 1px solid lightgray;
-  border-radius: 5px;
   font-weight: bold;
-  text-decoration: underline;
-  letter-spacing: 5px;
+  display: inline-block;
+  margin: 30px;
+}
+
+span {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#cart {
+  position: relative;
+}
+
+#addto {
+  display: inline-block;
+}
+div.buttons {
+  margin: 60px;
+  border: 1px solid lightgray;
+  display: inline-block;
+  padding: 40px;
+  border-radius: 8px;
+}
+div.outside {
+  display: inline-block;
+  margin: 5px;
+  border-radius: 3px;
+  margin-left: 50px;
+}
+
+div.inside {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding: 6px;
+  text-align: center;
+  background-color: rgb(228, 228, 228);
+}
+
+div.inc {
+  background-color: lightgray;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+div.dec {
+  background-color: lightgray;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+button {
+  border: none;
+  background-color: lightgray;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  outline: none;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.content a {
-  color: #bd9f66;
-}
-
-.content h1 {
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  text-align: center;
-}
-.content ul ul#idp-1 li {
-  border: 1px solid #bd9f66;
-  font-weight: 500;
-  color: white;
-  text-decoration: none;
-}
-.content ul ul#idp-2 li {
-  border: 1px solid #bd9f66;
-  font-weight: 500;
-  color: white;
-  text-decoration: none;
-}
-.content ul ul#idp-3 li {
-  border: 1px solid #bd9f66;
-  font-weight: 500;
-  color: white;
-  text-decoration: none;
-}
-.footer {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 50px;
-}
-.footer .item {
-  flex: 1;
-  padding: 10px;
-}
-
-.footer .space {
-  flex: 1;
-}
-
-.footer .about p {
-  color: white;
-  line-height: 25px;
-}
-
-@media screen and (max-width: 620px) {
-  .brand .logo {
-    width: 100%;
-    height: 150px;
-  }
-  .brand .brandname {
-    margin-left: 0px;
-    margin: 15px;
-    font-size: 25px;
-    letter-spacing: 1px;
-  }
-  .brand img#logo2 {
-    display: none;
-  }
-  .content ul li {
-    background-color: rgba(46, 46, 46, 0.9);
-    font-size: 12px;
-    letter-spacing: 2px;
-  }
-  .brand .brandname {
-    font-size: 18px;
-  }
-  .footer .item {
-    flex: none;
-    width: 100%;
+@media screen and (max-width: 630px) {
+  div.buttons {
+    margin: 10px;
+    border: 1px solid lightgray;
+    display: inline-block;
+    padding: 0px;
+    border-radius: 8px;
   }
 }
