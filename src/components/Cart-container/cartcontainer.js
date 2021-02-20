@@ -9,12 +9,17 @@ const CartContainer = () => {
           textAlign: 'center',
           letterSpacing: '2px',
           fontWeight: 'bold',
+          margin: '20px',
         }}
       >
         YOUR BAG
       </h1>
       <div
-        style={{ border: '1px solid black' }}
+        style={{
+          boxShadow: '0px 5px 8px 2px rgb(0,0,0,0.2)',
+          padding: '10px',
+          marginTop: '40px',
+        }}
         className='container text-center'
       >
         <div className='cart-box'>
