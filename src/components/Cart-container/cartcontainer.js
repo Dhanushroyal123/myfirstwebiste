@@ -1,7 +1,19 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Product from '../Product/products'
+import { connect } from 'react-redux'
+import { CLEAR_CART } from '../../actions/actions'
 
-const CartContainer = () => {
+const CartContainer = ({ cart = [], total, dispatch }) => {
+  if (cart.length === 0) {
+    return (
+      <div className='container text-center'>
+        <header>
+          <h2>YOUR BAG</h2>
+          <h4 className='empty-cart'>is currently empty</h4>
+        </header>
+      </div>
+    )
+  }
   return (
     <>
       <h1
@@ -18,16 +30,49 @@ const CartContainer = () => {
         style={{
           boxShadow: '0px 5px 8px 2px rgb(0,0,0,0.2)',
           padding: '10px',
-          marginTop: '40px',
+          marginTop: '20px',
         }}
         className='container text-center'
       >
         <div className='cart-box'>
-          <Product />
+          {cart.map((item) => {
+            return <Product key={item.id} {...item} />
+          })}
         </div>
       </div>
+      <footer className='container '>
+        <hr />
+        <div id='cart-total'>
+          <h4>
+            Total:
+            <span style={{ float: 'right', fontSize: '16px' }}>
+              {total}Rs/-
+            </span>
+          </h4>
+        </div>
+        <div style={{ textAlign: 'center' }}>
+          <button
+            id='clear-btn'
+            className='btn clear-btn'
+            style={{
+              border: '1px solid red',
+              color: 'red',
+              letterSpacing: '2px',
+              fontWeight: 'bold',
+            }}
+            onClick={() => dispatch({ type: CLEAR_CART })}
+          >
+            CLEAR CART
+          </button>
+        </div>
+      </footer>
     </>
   )
 }
 
-export default CartContainer
+const mapStateToProps = (state) => {
+  const { cart, total } = state
+  return { cart, total }
+}
+
+export default connect(mapStateToProps)(CartContainer)

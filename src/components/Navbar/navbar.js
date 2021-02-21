@@ -56,7 +56,7 @@ const Navbar = ({ total }) => {
   )
 }
 const mapStateToProps = (state) => {
-  return { total: state.count }
+  return { total: state.amount }
 }
 
 export default connect(mapStateToProps)(Navbar)
