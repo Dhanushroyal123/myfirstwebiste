@@ -34,7 +34,7 @@ const Product = ({
         >
           <span>{p_name}</span>
           <br />
-          <span>{price}</span>
+          <span>{price} Rs/-</span>
           <br />
           <a href='#' onClick={() => remove()}>
             Remove

@@ -13,9 +13,7 @@ function reducer(state, action) {
     case DECREASE:
       let tempC = []
       if (action.payLoad.amount === 1) {
-        tempC = state.cart.filter(
-          (cartItem) => cartItem.id !== action.payLoad.id
-        )
+        console.log('hii')
       } else {
         tempC = state.cart.map((cartItem) => {
           if (cartItem.id === action.payLoad.id) {
