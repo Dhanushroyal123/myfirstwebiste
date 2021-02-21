@@ -2,7 +2,6 @@ import { connect } from 'react-redux'
 import { INCREASE, DECREASE, REMOVE } from '../../actions/actions'
 
 const Product = ({
-  key,
   image,
   p_name,
   price,
@@ -56,8 +55,19 @@ const Product = ({
   )
 }
 
+/*
 const mapDispatchToProps = (dispatch, ownProps) => {
   console.log('own', ownProps)
+  const { id, amount } = ownProps
+  return {
+    remove: () => dispatch({ type: REMOVE, payLoad: { id } }),
+    increase: () => dispatch({ type: INCREASE, payLoad: { id } }),
+    decrease: () => dispatch({ type: DECREASE, payLoad: { id, amount } }),
+  }
+}
+*/
+
+const mapDispatchToProps = (dispatch, ownProps) => {
   const { id, amount } = ownProps
   return {
     remove: () => dispatch({ type: REMOVE, payLoad: { id } }),

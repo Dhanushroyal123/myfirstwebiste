@@ -76,7 +76,6 @@ const CartContainer = ({ cart = [], total, dispatch }) => {
 
 const mapStateToProps = (state) => {
   const { cart, total } = state
-  console.log('hhi', state)
   return { cart, total }
 }
 
