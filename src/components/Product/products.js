@@ -57,6 +57,7 @@ const Product = ({
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
+  console.log('own', ownProps)
   const { id, amount } = ownProps
   return {
     remove: () => dispatch({ type: REMOVE, payLoad: { id } }),

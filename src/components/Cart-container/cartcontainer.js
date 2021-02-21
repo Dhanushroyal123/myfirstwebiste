@@ -1,9 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Product from '../Product/products'
+import React from 'react'
 import { connect } from 'react-redux'
-import { CLEAR_CART } from '../../actions/actions'
+import { CLEAR_CART, GET_TOTALS } from '../../actions/actions'
 
 const CartContainer = ({ cart = [], total, dispatch }) => {
+  React.useEffect(() => {
+    dispatch({ type: GET_TOTALS })
+  })
   if (cart.length === 0) {
     return (
       <div className='container text-center'>
@@ -72,6 +76,7 @@ const CartContainer = ({ cart = [], total, dispatch }) => {
 
 const mapStateToProps = (state) => {
   const { cart, total } = state
+  console.log('hhi', state)
   return { cart, total }
 }
 
