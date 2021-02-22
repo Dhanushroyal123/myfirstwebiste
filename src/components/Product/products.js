@@ -35,37 +35,51 @@ const Product = ({
           <br />
           <span>{price} Rs/-</span>
           <br />
-          <a href='#' onClick={() => remove()}>
+          <a
+            href='#'
+            style={{ textDecoration: 'none' }}
+            onClick={() => remove()}
+          >
             Remove
           </a>
         </div>
         <div style={{ flex: '2' }}>
-          <span style={{ cursor: 'pointer' }} onClick={() => increase()}>
-            +
-          </span>
+          <a
+            href='#'
+            style={{
+              cursor: 'pointer',
+              padding: '2px',
+              color: '#067fff',
+              fontWeight: 'bold',
+              fontSize: '16px',
+              textDecoration: 'none',
+            }}
+            onClick={() => increase()}
+          >
+            &#9651;
+          </a>
           <br />
           <span>{amount}</span>
           <br />
-          <span style={{ cursor: 'pointer' }} onClick={() => decrease()}>
-            -
-          </span>
+          <a
+            href='#'
+            style={{
+              cursor: 'pointer',
+              padding: '2px',
+              color: '#067fff',
+              fontWeight: 'bold',
+              fontSize: '16px',
+              textDecoration: 'none',
+            }}
+            onClick={() => decrease()}
+          >
+            &#9661;
+          </a>
         </div>
       </div>
     </div>
   )
 }
-
-/*
-const mapDispatchToProps = (dispatch, ownProps) => {
-  console.log('own', ownProps)
-  const { id, amount } = ownProps
-  return {
-    remove: () => dispatch({ type: REMOVE, payLoad: { id } }),
-    increase: () => dispatch({ type: INCREASE, payLoad: { id } }),
-    decrease: () => dispatch({ type: DECREASE, payLoad: { id, amount } }),
-  }
-}
-*/
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   const { id, amount } = ownProps
