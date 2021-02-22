@@ -3,7 +3,7 @@ import logo from '../../assets/fplogo.png'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { connect } from 'react-redux'
 
-const Navbar = ({ total }) => {
+const Header = ({ total }) => {
   return (
     <div className='header container-fluid'>
       <img
@@ -59,4 +59,4 @@ const mapStateToProps = (state) => {
   return { total: state.amount }
 }
 
-export default connect(mapStateToProps)(Navbar)
+export default connect(mapStateToProps)(Header)
