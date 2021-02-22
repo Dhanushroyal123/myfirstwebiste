@@ -48,11 +48,13 @@ const Product = ({
             href='#'
             style={{
               cursor: 'pointer',
-              padding: '2px',
+              padding: '1px',
               color: '#067fff',
               fontWeight: 'bold',
               fontSize: '16px',
               textDecoration: 'none',
+              boxShadow: '2px 2px 6px 0px rgb(0,0,0,0.4)',
+              borderRadius: '5px',
             }}
             onClick={() => increase()}
           >
@@ -65,11 +67,13 @@ const Product = ({
             href='#'
             style={{
               cursor: 'pointer',
-              padding: '2px',
+              padding: '1px',
               color: '#067fff',
               fontWeight: 'bold',
               fontSize: '16px',
               textDecoration: 'none',
+              boxShadow: '2px 2px 6px 0px rgb(0,0,0,0.4)',
+              borderRadius: '5px',
             }}
             onClick={() => decrease()}
           >
