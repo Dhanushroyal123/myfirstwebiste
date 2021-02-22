@@ -28,6 +28,57 @@
   padding: 0px 50px 0px 50px;
 }
 
+div.cart-box {
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+h3.bag-head {
+  text-align: center;
+  letter-spacing: 8px;
+  font-weight: bold;
+  margin: 20px;
+  color: #007bff;
+}
+
+div.item {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 6px;
+  align-content: space-around;
+}
+
+div.item-img {
+  display: inline-block;
+  flex: 1;
+}
+
+div.item-details {
+  display: inline-block;
+  text-align: left;
+  flex: 1;
+}
+
+div.item-coun {
+  flex: 2;
+}
+
+div.item a {
+  text-decoration: none;
+}
+
+div.item a.counter {
+  cursor: pointer;
+  padding: 1px;
+  color: #067fff;
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+  box-shadow: -2px 2px 8px 0px rgb(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
 button#clear-btn {
   border: 1px solid red;
   letter-spacing: 2px;
@@ -56,9 +107,20 @@ span {
 @media screen and (max-width: 630px) {
   div.buttons {
     margin: 10px;
-    border: 1px solid lightgray;
+    border: 1px solid rgb(194, 156, 156);
     display: inline-block;
     padding: 0px;
     border-radius: 8px;
+  }
+  div.item-img {
+    flex: 1;
+  }
+
+  div.item-details {
+    flex: 1;
+  }
+
+  div.item-coun {
+    flex: 1;
   }
 }

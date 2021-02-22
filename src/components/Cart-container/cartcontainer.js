@@ -12,7 +12,7 @@ const CartContainer = ({ cart = [], total, dispatch }) => {
     return (
       <div className='container text-center'>
         <header>
-          <h3>YOUR BAG</h3>
+          <h3 className='bag-head'>YOUR BAG</h3>
           <h4 className='empty-cart'>is currently empty</h4>
         </header>
       </div>
@@ -20,27 +20,8 @@ const CartContainer = ({ cart = [], total, dispatch }) => {
   }
   return (
     <>
-      <h3
-        style={{
-          textAlign: 'center',
-          letterSpacing: '8px',
-          fontWeight: 'bold',
-          margin: '20px',
-          color: '#007bff',
-        }}
-      >
-        YOUR BAG
-      </h3>
-      <div
-        style={{
-          /*boxShadow: '0px 5px 8px 2px rgb(0,0,0,0.2)',*/
-          border: '1px solid lightgray',
-          borderRadius: '8px',
-          padding: '10px',
-          marginTop: '20px',
-        }}
-        className='container text-center'
-      >
+      <h3 className='bag-head'>YOUR BAG</h3>
+      <div className='container text-center'>
         <div
           style={cart.length < 3 ? {} : { height: '360px', overflow: 'auto' }}
           className='cart-box'
