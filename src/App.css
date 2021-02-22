@@ -23,16 +23,21 @@
 }
 
 .header {
-  background-color: #dbedff;
+  background-color: #95caff;
   height: 100px;
   padding: 0px 50px 0px 50px;
 }
 
-span#brand {
+button#clear-btn {
+  border: 1px solid red;
+  letter-spacing: 2px;
+  font-weight: 'bold';
+  color: red;
+}
+
+button#clear-btn:hover {
+  background-color: red;
   color: white;
-  font-weight: bold;
-  display: inline-block;
-  margin: 30px;
 }
 
 span {
@@ -46,33 +51,6 @@ span {
 
 #addto {
   display: inline-block;
-}
-
-div.outside {
-  display: inline-block;
-  margin: 5px;
-  border-radius: 3px;
-  margin-left: 50px;
-}
-
-div.inside {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  padding: 6px;
-  text-align: center;
-  background-color: rgb(228, 228, 228);
-}
-
-div.inc {
-  background-color: lightgray;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-div.dec {
-  background-color: lightgray;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
 }
 
 @media screen and (max-width: 630px) {

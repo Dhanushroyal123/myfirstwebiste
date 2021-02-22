@@ -12,7 +12,7 @@ const CartContainer = ({ cart = [], total, dispatch }) => {
     return (
       <div className='container text-center'>
         <header>
-          <h2>YOUR BAG</h2>
+          <h3>YOUR BAG</h3>
           <h4 className='empty-cart'>is currently empty</h4>
         </header>
       </div>
@@ -20,16 +20,17 @@ const CartContainer = ({ cart = [], total, dispatch }) => {
   }
   return (
     <>
-      <h1
+      <h3
         style={{
           textAlign: 'center',
-          letterSpacing: '2px',
+          letterSpacing: '8px',
           fontWeight: 'bold',
           margin: '20px',
+          color: '#007bff',
         }}
       >
         YOUR BAG
-      </h1>
+      </h3>
       <div
         style={{
           /*boxShadow: '0px 5px 8px 2px rgb(0,0,0,0.2)',*/
@@ -57,10 +58,10 @@ const CartContainer = ({ cart = [], total, dispatch }) => {
       <footer className='container '>
         <hr />
         <div id='cart-total'>
-          <h4>
+          <h4 style={{ color: '#007bff' }}>
             Total:
-            <span style={{ float: 'right', fontSize: '16px' }}>
-              {total}Rs/-
+            <span style={{ float: 'right', fontSize: '16px', color: 'black' }}>
+              {total} Rs/-
             </span>
           </h4>
         </div>
@@ -69,12 +70,6 @@ const CartContainer = ({ cart = [], total, dispatch }) => {
           <button
             id='clear-btn'
             className='btn clear-btn'
-            style={{
-              border: '1px solid red',
-              color: 'red',
-              letterSpacing: '2px',
-              fontWeight: 'bold',
-            }}
             onClick={() => dispatch({ type: CLEAR_CART })}
           >
             CLEAR CART
