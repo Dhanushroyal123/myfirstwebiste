@@ -16,7 +16,7 @@ const Product = ({
         style={{
           display: 'flex',
           flexWrap: 'wrap',
-          margin: '20px',
+          margin: '6px',
           alignContent: 'space-around',
         }}
         className='item'

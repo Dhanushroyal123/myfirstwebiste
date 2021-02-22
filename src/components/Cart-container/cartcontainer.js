@@ -32,15 +32,22 @@ const CartContainer = ({ cart = [], total, dispatch }) => {
       </h1>
       <div
         style={{
-          boxShadow: '0px 5px 8px 2px rgb(0,0,0,0.2)',
+          /*boxShadow: '0px 5px 8px 2px rgb(0,0,0,0.2)',*/
+          border: '1px solid lightgray',
+          borderRadius: '8px',
           padding: '10px',
           marginTop: '20px',
         }}
         className='container text-center'
       >
         <div className='cart-box'>
-          {cart.map((item) => {
-            return <Product key={item.id} {...item} />
+          {cart.map((item, index) => {
+            return (
+              <>
+                <Product key={item.id} {...item} />
+                {index < cart.length - 1 && <hr />}
+              </>
+            )
           })}
         </div>
       </div>
