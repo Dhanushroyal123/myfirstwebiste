@@ -53,7 +53,7 @@ const Product = ({
               fontWeight: 'bold',
               fontSize: '16px',
               textDecoration: 'none',
-              boxShadow: '2px 2px 6px 0px rgb(0,0,0,0.4)',
+              boxShadow: '-2px 2px 8px 0px rgb(0,0,0,0.4)',
               borderRadius: '5px',
             }}
             onClick={() => increase()}
@@ -72,7 +72,7 @@ const Product = ({
               fontWeight: 'bold',
               fontSize: '16px',
               textDecoration: 'none',
-              boxShadow: '2px 2px 6px 0px rgb(0,0,0,0.4)',
+              boxShadow: '-2px 2px 8px 0px rgb(0,0,0,0.4)',
               borderRadius: '5px',
             }}
             onClick={() => decrease()}
