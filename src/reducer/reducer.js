@@ -11,10 +11,12 @@ function reducer(state, action) {
     case CLEAR_CART:
       return { ...state, cart: [] }
     case DECREASE:
-      /*
       let tempC = []
-      if (action.payLoad.amount === 1) {
-        console.log('hii')
+      if (action.payLoad.amount <= 1) {
+        return {
+          ...state,
+          cart: state.cart.filter((each) => each.id != action.payLoad.id),
+        }
       } else {
         tempC = state.cart.map((cartItem) => {
           if (cartItem.id === action.payLoad.id) {
@@ -24,21 +26,6 @@ function reducer(state, action) {
         })
       }
       return { ...state, cart: tempC }
-      */
-      if (action.payLoad.amount === 1) {
-        return {
-          ...state,
-          cart: state.cart.filter((each) => each.id !== action.payLoad.id),
-        }
-      } else {
-        let tempC = state.cart.map((cartItem) => {
-          if (cartItem.id === action.payLoad.id) {
-            return { ...state, amount: cartItem.amount - 1 }
-          }
-          return cartItem
-        })
-        return { ...state, cart: tempC }
-      }
 
     case INCREASE:
       let tempCart = state.cart.map((cartItem) => {
