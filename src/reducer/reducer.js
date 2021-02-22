@@ -10,6 +10,7 @@ function reducer(state, action) {
   switch (action.type) {
     case CLEAR_CART:
       return { ...state, cart: [] }
+
     case DECREASE:
       let tempC = []
       if (action.payLoad.amount <= 1) {
@@ -35,11 +36,13 @@ function reducer(state, action) {
         return cartItem
       })
       return { ...state, cart: tempCart }
+
     case REMOVE:
       return {
         ...state,
         cart: state.cart.filter((each) => each.id !== action.payLoad.id),
       }
+
     case GET_TOTALS:
       let { total, amount } = state.cart.reduce(
         (cartTotal, cartItem) => {
@@ -56,6 +59,7 @@ function reducer(state, action) {
       )
 
       return { ...state, total: total, amount: amount }
+
     default:
       return state
   }

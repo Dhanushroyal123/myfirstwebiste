@@ -40,7 +40,10 @@ const CartContainer = ({ cart = [], total, dispatch }) => {
         }}
         className='container text-center'
       >
-        <div className='cart-box'>
+        <div
+          style={cart.length < 3 ? {} : { height: '360px', overflow: 'auto' }}
+          className='cart-box'
+        >
           {cart.map((item, index) => {
             return (
               <>
@@ -61,6 +64,7 @@ const CartContainer = ({ cart = [], total, dispatch }) => {
             </span>
           </h4>
         </div>
+        <hr />
         <div style={{ textAlign: 'center' }}>
           <button
             id='clear-btn'
