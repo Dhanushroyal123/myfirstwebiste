@@ -6,16 +6,7 @@ import { connect } from 'react-redux'
 const Header = ({ total }) => {
   return (
     <div className='header container-fluid'>
-      <img
-        src={logo}
-        style={{
-          width: '200px',
-          height: '140px',
-          position: 'relative',
-          top: '-20px',
-        }}
-        alt=''
-      />
+      <img id='logo' src={logo} alt='' />
       <div
         id='cart'
         style={{
